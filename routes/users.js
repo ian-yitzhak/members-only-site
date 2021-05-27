@@ -127,8 +127,8 @@ router.get('/post', (req,res)=>{
 router.post('/post', async (req,res)=>{
 
 	const newPost = new Post({
-		name,
-		description
+		name: req.body.name,
+		description: req.body.description
 	})
 	try{
 
