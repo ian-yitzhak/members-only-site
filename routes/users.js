@@ -112,4 +112,17 @@ router.get('/logout', (req,res)=>{
 	req.flash('success_msg', "you logged out")
 	res.redirect('/users/login')
 })
+
+//post
+
+
+router.get('/post', (req,res)=>{
+
+
+})
+
+router.post('/post', (req,res)=>{
+
+	
+})
 module.exports = router
