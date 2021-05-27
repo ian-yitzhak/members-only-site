@@ -7,6 +7,8 @@
 
 ### Install Node modules from package.json
 
+### use your default mongodb configurations to configure the files
+
 ```sh
   npm i
 ```
