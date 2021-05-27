@@ -1,7 +1,8 @@
-### The page is a mebers dashboard page
+### The page is a members dashboard page
 
 ### users must be registered and login inorder to post their requests
 ### once logged in you can now view the home page and post your messages
+### the site contains: HOME,DASHBOARD,LOGIN,REGISTER pages
 
 
 ### Install Node modules from package.json
