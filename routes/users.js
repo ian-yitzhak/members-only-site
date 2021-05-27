@@ -5,6 +5,8 @@ const router = express.Router()
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const passport = require('passport');
+const Post = require("../models/post");
+
 
 
 
@@ -117,11 +119,25 @@ router.get('/logout', (req,res)=>{
 
 
 router.get('/post', (req,res)=>{
+	res.render('post')
 
 
 })
 
-router.post('/post', (req,res)=>{
+router.post('/post', async (req,res)=>{
+
+	const newPost = new Post({
+		name,
+		description
+	})
+	try{
+
+		savePost = await newPost.save()
+		res.redirect('/')
+	}
+	catch(err){
+		console.log(err)
+	}
 
 	
 })
