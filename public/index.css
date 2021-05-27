@@ -17,3 +17,11 @@ body{
 	align-items: center;
 	justify-content: center;
 }
+
+/* mobile styles */
+@media only screen and (max-width: 767px) { 
+ .mt-5{
+
+ 	width: 100%;
+ }
+  }
