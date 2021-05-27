@@ -16,6 +16,7 @@ require('./db/db')
 
 
 //EJS
+app.use(express.static('public'))
 app.use(expressLayouts)
 app.set('view engine' , 'ejs')
 //bodyparser
