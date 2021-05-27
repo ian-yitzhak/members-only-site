@@ -17,7 +17,7 @@ module.exports = (passport)=>{
 			User.findOne({ email: email})
 			.then(user=>{
 				if(!user){
-					return done(null, false, {message : 'email doenot exist'})
+					return done(null, false, {message : 'email does not exist'})
 
 				}
 				//password
@@ -26,7 +26,7 @@ module.exports = (passport)=>{
 					if(isMatch){
 						return done(null, user);
 					}else{
-						return done(null, false,{message: 'incorect p/w'})
+						return done(null, false,{message: 'incorrect password'})
 					}
 
 

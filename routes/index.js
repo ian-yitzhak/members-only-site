@@ -6,7 +6,7 @@ const Post = require("../models/post");
 
 
 
-router.get('/', async (req,res)=>{
+router.get('/', ensureAuthenticated, async (req,res)=>{
 
 
 	const allPosts = await Post.find()
