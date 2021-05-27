@@ -6,6 +6,7 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const passport = require('passport');
 const Post = require("../models/post");
+const{  ensureAuthenticated } = require('../config/auth');
 
 
 
@@ -118,7 +119,7 @@ router.get('/logout', (req,res)=>{
 //post
 
 
-router.get('/post', (req,res)=>{
+router.get('/post', ensureAuthenticated, (req,res)=>{
 	res.render('post')
 
 
