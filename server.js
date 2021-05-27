@@ -1,9 +1,12 @@
-const express = require('express')
+const express = require('express');
 const expressLayouts = require('express-ejs-layouts')
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
 
 const app = express()
+
+require('./config/passport')(passport)
 
 const indexRoute = require('./routes/index')
 const usersRoute = require('./routes/users')
@@ -27,6 +30,8 @@ app.use(
     saveUninitialized: true
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(flash());
 
