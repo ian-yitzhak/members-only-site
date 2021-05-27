@@ -10,7 +10,7 @@ router.get('/', ensureAuthenticated, async (req,res)=>{
 
 
 	const allPosts = await Post.find()
-	res.render('welcome' , { allPosts : allPosts })
+	res.render('welcome' , { allPosts : allPosts , name: req.user.name })
 	
 })
 
