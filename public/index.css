@@ -6,3 +6,7 @@ body{
 	align-items: center;
 	text-align: center;
 }
+#card__body{
+	margin: 80px;
+
+}

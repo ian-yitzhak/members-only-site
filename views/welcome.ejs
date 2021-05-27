@@ -36,3 +36,29 @@
 </div>
 <hr>
 
+
+  <div class="container">
+  <div class="row">
+
+    
+
+      <% allPosts.forEach(mesage => { %>
+    <div class="col" id="card__body">    
+    <div class="card card-body"> 
+     
+
+        <h5> Name: <%= mesage.name %> </h5>
+      <p> Message: <%= mesage.description %> </p>
+      
+      
+    </div>    
+ </div>
+
+     <% }) %>
+    
+  </div>
+</div>
+
+  </div>
+</div>
+
