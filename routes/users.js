@@ -2,6 +2,9 @@ const express = require('express')
 
 const router = express.Router()
 
+const User = require('../models/User')
+const bcrypt = require('bcrypt')
+
 
 
 router.get('/login', (req,res)=>{
@@ -51,7 +54,34 @@ router.post('/register' , (req,res)=>{
 		})
 
 	}else{
-		res.send('pass')
+		User.findOne({email: email})
+		.then(user=>{
+			if(user){
+				errors.push({msg: 'email exist'} )
+
+			res.render('register', {
+			errors,
+			name,
+			email,
+			password,
+			password2
+		});
+
+			}
+			else{
+				const newUser = new User({
+					name,
+					email,
+					password
+				});
+				console.log(newUser)
+
+
+
+
+
+			}
+		});
 	}
 })
 module.exports = router
