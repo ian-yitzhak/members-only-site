@@ -3,6 +3,7 @@
 ### users must be registered and login inorder to post their requests
 ### once logged in you can now view the home page and post your messages
 ### the site contains: HOME,DASHBOARD,LOGIN,REGISTER pages
+### get the passcode to post a message
 
 
 ### Install Node modules from package.json
