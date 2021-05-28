@@ -33,7 +33,7 @@ router.get('/club' , ensureAuthenticated, async (req,res)=>{
 
 
 router.post('/member', (req, res) => {
-      if(req.body.secret !== "hostroom") {
+      if(req.body.secret !== "0729008808") {
         req.flash('error_msg', 'wrong passkey')
         res.redirect('member')
        
