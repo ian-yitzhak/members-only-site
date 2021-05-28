@@ -1,47 +1,39 @@
+<div class="text-center">  <h5> Hi <%= name %></h5> <%- include ("./partials/messages"); %> </div>
+
 <div class="row mt-3">
+  
+
+
   <div class="col-md-3">
     <div class="card card-body ">
-     
-      <a href="/users/register" class="btn btn-success btn-block mb-2"
-        >Register</a
-      >
       
+      
+      <a href="/users/logout" class="btn btn-danger btn-block">Logout</a>
     </div>
   </div>
 
 
-  <div class="col-md-3">
-    <div class="card card-body ">
-      
-      
-      <a href="/users/login" class="btn btn-danger btn-block">Login</a>
-    </div>
-  </div>
-
-
-  <div class="col-md-3">
-    <div class="card card-body ">
-    
-      
-      <a href="/dashboard" class="btn btn-primary btn-block">Profile</a>
-    </div>
-  </div>
+ 
 
   <div class="col-md-3">
     <div class="card card-body ">
       
       
-      <a href="/member" class="btn btn-info ">Clubs</a>
+      <a href="/users/post" class="btn btn-warning btn-block">Post</a>
     </div>
   </div>
 
 </div>
 
 
+  
+
+  
+
 <hr>
 
 <div class="alert alert-success">
-  <strong>HEllO!, <h5> <%= name %> </h5> Our posts!</strong>join a club to post
+  <strong><h4> Our posts! </h4></strong> 
 </div>
 <hr>
 
@@ -53,7 +45,7 @@
     
      <h6> Tittle: <%= mesage.name %> </h6>
       <p> Message: <%= mesage.description %> </p>
-      
+      <p> Athor: <%= mesage.author %> </p>
       <p> <%= mesage.date %> </p>
       </div>    
  

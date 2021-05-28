@@ -128,12 +128,14 @@ router.post('/post', async (req,res)=>{
 
 	const newPost = new Post({
 		name: req.body.name,
-		description: req.body.description
+		description: req.body.description,
+		author: req.user.name,
+		date: new Date()
 	})
 	try{
 
 		savePost = await newPost.save()
-		res.redirect('/')
+		res.redirect('/club')
 	}
 	catch(err){
 		console.log(err)
@@ -141,4 +143,6 @@ router.post('/post', async (req,res)=>{
 
 	
 })
+
+
 module.exports = router
